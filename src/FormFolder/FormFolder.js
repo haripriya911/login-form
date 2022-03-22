@@ -1,7 +1,7 @@
 import "./FormFolder.css";
 import { useState } from "react";
 import { useNavigate } from 'react-router';
-
+import authentication from '../loginAuthentication'
 const FormFolder = () => {
   let navigate=useNavigate();
 const username="a";
@@ -19,6 +19,7 @@ const[error,setError]=useState(false)
 const submitHandler=(event)=>{
   event.preventDefault();
     if((loginUserName===username)&& (loginPassword===password)){
+      authentication.login()
     navigate('/home');
     }
     else{
