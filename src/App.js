@@ -5,8 +5,6 @@ import FormFolder from "./FormFolder/FormFolder";
 import ListUser from "./ListUsers/ListUser";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
-
 function App() {
   return (
     <>
@@ -22,12 +20,7 @@ function App() {
               </>
             }
           ></Route>
-           <Route
-            path="/home"
-            element={
-              <ListUser/>
-            }
-          ></Route>
+          <Route path="/home" element={<ListUser />}></Route>
         </Routes>
       </BrowserRouter>
     </>

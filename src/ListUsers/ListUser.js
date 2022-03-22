@@ -1,9 +1,8 @@
-import { useNavigate, Redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import HeaderFolder from "../HeaderFolder/HeaderFolder";
 import "./ListUsers.css";
 import authentication from "../loginAuthentication";
 import { useEffect } from "react";
-
 
 const ListItem = [
   {
@@ -79,6 +78,7 @@ const ListUser = () => {
   const logoutHandler = () => {
     navigate("/");
   };
+
   return (
     <>
       <HeaderFolder name="User List" />
@@ -86,11 +86,8 @@ const ListUser = () => {
       <button className="logout" onClick={logoutHandler}>
         LOGOUT
       </button>
-      <div className="user">
-        <div className="img">
-          <ol> {User}</ol>
-        </div>
-      </div>
+
+      <ol> {User}</ol>
     </>
   );
 };

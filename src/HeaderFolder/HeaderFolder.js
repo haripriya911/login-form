@@ -1,11 +1,11 @@
-import  "./HeaderFolder.css";
-const HeaderFolder=(props)=>{
-    return(
-        <>
-        <div className="header">
+import "./HeaderFolder.css";
+const HeaderFolder = (props) => {
+  return (
+    <>
+      <div className="header">
         <h3>{props.name}</h3>
-        </div>
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
 export default HeaderFolder;

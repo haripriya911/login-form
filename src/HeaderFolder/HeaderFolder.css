@@ -1,11 +1,11 @@
-.body{
-    background-color: blue;
+.body {
+  background-color: blue;
 }
-.header{
-    width:100%;
-    height:60px;
-    text-align: center;
-    border:2px solid blue;
-    background-color: blue;
-    color: white;
+.header {
+  width: 105%;
+  height: 60px;
+  text-align: center;
+  border: 2px solid blue;
+  background-color: blue;
+  color: white;
 }

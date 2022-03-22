@@ -1,27 +1,14 @@
-.user {
-  /* background-color: black;
-  color: white;
-  border: 1px solid white;
-  text-decoration: none;
-  width: 40%;
-  height: 250px;
-  margin-left: 300px;
-  text-align: center;
-  overflow: scroll;
-  border: 2px solid white; */
+.userlist {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 50px;
 }
-.userlist{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
 
-
-}
-.img {
-  width: 25%;
-}
-.logout{
-    width:10%;
-    margin-left: 1150px;
-    margin-top: 10px;
+.logout {
+  width: 30%;
+  margin-left: 120px;
+  margin-top: 10px;
+  background-color:black;
+  border: 2px solid black;
 }
