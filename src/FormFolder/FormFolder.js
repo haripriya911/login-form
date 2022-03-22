@@ -1,10 +1,12 @@
 import "./FormFolder.css";
 import { useState } from "react";
+
 const FormFolder = () => {
 const username="admin";
 const password="admin";
 const [loginUserName,setLoginUserName]=useState('');
 const [loginPassword,setLoginPassword]=useState('');
+const[error,setError]=useState(false)
  const userNameHandler=(event)=>{
    setLoginUserName(event.target.value)
  }
@@ -15,10 +17,11 @@ const [loginPassword,setLoginPassword]=useState('');
 const submitHandler=(event)=>{
   event.preventDefault();
     if((loginUserName===username)&& (loginPassword===password)){
-    alert("welcome");
+    
     }
     else{
-      alert("login fail");
+     // alert("login fail");
+      setError(true)
     }
     
 }
@@ -27,7 +30,7 @@ const submitHandler=(event)=>{
 
   return (
     <>
-    <div className="form" onSubmit={submitHandler}>
+    <div className="form" onSubmit={submitHandler} >
         <form className="form" >
           <div className="username">
             <div className="mail">
@@ -41,11 +44,13 @@ const submitHandler=(event)=>{
               <input type="password" placeholder="Enter your Password" value={loginPassword} onChange={passwordHandler}></input>
             </div>
 
-            <button type="submit" disabled={(loginUserName.length===0 && loginPassword.length===0)?true:false}>LOGIN</button>
+            <button type="submit" disabled={((loginUserName.length===0) && (loginPassword.length===0))?true:false } >LOGIN</button>
           </div>
-          
+       {  error && <h3 className="incorrect" > USERNAME OR PASSWORD INCORRECT</h3>}
+        
         </form>
         
+      
       </div>
       
       
