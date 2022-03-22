@@ -3,14 +3,30 @@ import "./App.css";
 import FooterFolder from "./FooterFolder/FooterFolder";
 import FormFolder from "./FormFolder/FormFolder";
 import ListUser from "./ListUsers/ListUser";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <HeaderFolder />
-      <FormFolder />
-      <ListUser />
-      <FooterFolder />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HeaderFolder />
+                <FormFolder />
+                <FooterFolder />
+              </>
+            }
+          ></Route>
+           <Route
+            path="/home"
+            element={
+              <ListUser/>
+            }
+          ></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

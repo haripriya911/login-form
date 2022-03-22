@@ -1,7 +1,9 @@
 import "./FormFolder.css";
 import { useState } from "react";
+import { useNavigate } from 'react-router';
 
 const FormFolder = () => {
+  let navigate=useNavigate();
 const username="admin";
 const password="admin";
 const [loginUserName,setLoginUserName]=useState('');
@@ -17,10 +19,9 @@ const[error,setError]=useState(false)
 const submitHandler=(event)=>{
   event.preventDefault();
     if((loginUserName===username)&& (loginPassword===password)){
-    
+    navigate('/home');
     }
     else{
-     // alert("login fail");
       setError(true)
     }
     
