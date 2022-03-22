@@ -14,10 +14,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-    
+
+
 }
 .img {
   width: 25%;
 }
-img {
+.logout{
+    width:10%;
+    margin-left: 1150px;
+    margin-top: 10px;
 }

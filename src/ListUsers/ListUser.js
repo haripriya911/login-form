@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+import HeaderFolder from "../HeaderFolder/HeaderFolder";
 import "./ListUsers.css";
+
+
 const ListItem = [
   {
     id: "1",
@@ -32,10 +36,28 @@ const ListItem = [
     name: "Ashley",
     src: "https://randomuser.me/api/portraits/med/women/49.jpg",
   },
+  {
+    id: "7",
+    name: "marlin",
+    src: "https://randomuser.me/api/portraits/med/women/19.jpg",
+  },{
+    id: "8",
+    name: "Kajini",
+    src: "https://randomuser.me/api/portraits/med/women/21.jpg",
+  },
+  {
+    id: "9",
+    name: "sherlin",
+    src: "https://randomuser.me/api/portraits/med/women/29.jpg",
+  },{
+    id: "10",
+    name: "mark",
+    src: "https://randomuser.me/api/portraits/med/women/29.jpg",
+  },
 ];
-console.log(ListItem, "HH");
 
 const ListUser = () => {
+    let navigate=useNavigate();
   const User = ListItem.map((User) => (
     <>
     <li className="userlist">
@@ -44,13 +66,23 @@ const ListUser = () => {
       </li>
     </>
   ));
+  const logoutHandler=()=>{
+navigate('/');
+  }
   return (
+      <>
+      <HeaderFolder name='User List'/>
+      
+      <button className="logout" onClick={logoutHandler}>LOGOUT</button>
     <div className="user">
       <div className="img">
         <ol> {User}</ol>
       </div>
+    
     </div>
+    </>
   );
+  
 };
 
 export default ListUser;

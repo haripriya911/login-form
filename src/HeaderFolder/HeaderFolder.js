@@ -3,7 +3,7 @@ const HeaderFolder=(props)=>{
     return(
         <>
         <div className="header">
-        <h3>LOGIN FORM</h3>
+        <h3>{props.name}</h3>
         </div>
         </>
     )
