@@ -4,8 +4,8 @@ import { useNavigate } from "react-router";
 import authentication from "../loginAuthentication";
 const FormFolder = () => {
   let navigate = useNavigate();
-  const username = "a";
-  const password = "a";
+  const username = "admin";
+  const password = "admin123";
   const [loginUserName, setLoginUserName] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [error, setError] = useState(false);
