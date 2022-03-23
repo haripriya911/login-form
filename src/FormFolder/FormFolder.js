@@ -27,8 +27,8 @@ const FormFolder = () => {
 
   return (
     <>
-      <div className="form" onSubmit={submitHandler}>
-        <form className="form">
+      <div className="form">
+        <form className="form" onSubmit={submitHandler}>
           <div className="username">
             <div className="mail">
               <label for="username">USER NAME:</label>
