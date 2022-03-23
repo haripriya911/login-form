@@ -6,9 +6,18 @@
 }
 
 .logout {
-  width: 30%;
-  margin-left: 120px;
+  width: 28%;
+
+  text-align: center;
+  margin-left: 108px;
   margin-top: 10px;
-  background-color:black;
+  background-color: black;
   border: 2px solid black;
+}
+
+@media only screen and (width: 1366px) {
+  .logout {
+    width: 100px;
+    margin-left: 630px;
+  }
 }

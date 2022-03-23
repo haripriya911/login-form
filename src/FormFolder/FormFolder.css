@@ -18,6 +18,13 @@
   height: 280px;
   text-align: center;
 }
+@media only screen and (width: 1366px) {
+  .username {
+    width: 350px;
+    margin-left: 420px;
+    margin-top: 50px;
+  }
+}
 
 button {
   background-color: #4caf50; /* Green */
@@ -37,8 +44,21 @@ button:disabled {
 
   text-align: center;
 }
+@media only screen and (width: 1366px) {
+  .mail {
+    height: 170px;
+    width: 250px;
+    margin-left: 50px;
+  }
+}
 
 .incorrect {
   color: red;
   margin-top: 1px;
+}
+@media only screen and (width: 1366px) {
+  .incorrect {
+    margin-left: 500px;
+    margin-bottom: 20px;
+  }
 }
